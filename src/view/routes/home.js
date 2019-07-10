@@ -4,7 +4,7 @@ var evs = require('../../EVENTS').hello
 function Home (match) {
     return function HomeView (props) {
         return <div>
-            home route... hello {props.hello}
+            home route... hello {props.hello || props.foo}
 
             <form onSubmit={props.emit(evs.world)}>
                 <input type="text" name="example" />
